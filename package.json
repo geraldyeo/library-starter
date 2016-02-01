@@ -1,0 +1,28 @@
+{
+  "name": "library-starter",
+  "version": "0.1.0",
+  "description": "Library starter kit",
+  "main": "index.js",
+  "scripts": {
+    "compile": "rollup -c rollup.config.js",
+    "prepublish": "npm run compile",
+    "pretest": "npm run compile",
+    "test": "tape -r babel-register tests/**/*.test.js | faucet"
+  },
+  "keywords": [],
+  "author": "Gerald Yeo <gerald.yeo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "faucet": "0.0.1",
+    "rollup": "^0.25.2",
+    "rollup-plugin-babel": "^2.3.9",
+    "tape": "^4.4.0"
+  }
+}
