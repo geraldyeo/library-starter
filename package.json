@@ -1,25 +1,35 @@
 {
-  "name": "library-starter",
+  "name": "es6-library-starter",
   "version": "0.1.0",
-  "description": "Library starter kit",
+  "description": "Starter kit for npm module using es6.",
   "main": "index.js",
   "scripts": {
     "compile": "rollup -c rollup.config.js",
     "prepublish": "npm run compile",
+	"lint": "eslint -c .eslintrc src",
     "pretest": "npm run compile",
-    "test": "tape -r babel-register tests/**/*.test.js | faucet"
+    "test": "tape -r ./tests/config.babel.js tests/**/*.test.js | faucet"
   },
-  "keywords": [],
+  "keywords": [
+    "es6",
+    "module",
+    "starter",
+    "boilerplate"
+  ],
   "author": "Gerald Yeo <gerald.yeo@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.7",
     "babel-plugin-transform-runtime": "^6.4.3",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-es2015-rollup": "^1.1.1",
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.4.3",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
     "faucet": "0.0.1",
     "rollup": "^0.25.2",
     "rollup-plugin-babel": "^2.3.9",
