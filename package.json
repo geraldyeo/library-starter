@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "compile": "rollup -c rollup.config.js",
-    "prepublish": "npm run compile",
-	"lint": "eslint -c .eslintrc src",
-    "pretest": "npm run compile",
-    "test": "tape -r ./tests/config.babel.js tests/**/*.test.js | faucet"
+    "prepublish": "BABEL_ENV=production npm run compile",
+    "lint": "eslint -c .eslintrc src",
+    "pretest": "BABEL_ENV=test npm run compile",
+    "test": "nyc ava"
   },
   "keywords": [
     "es6",
@@ -19,6 +19,7 @@
   "author": "Gerald Yeo <gerald.yeo@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.11.0",
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.7",
@@ -30,9 +31,20 @@
     "eslint": "^1.10.3",
     "eslint-config-standard": "^4.4.0",
     "eslint-plugin-standard": "^1.3.1",
-    "faucet": "0.0.1",
+    "nyc": "^5.5.0",
     "rollup": "^0.25.2",
-    "rollup-plugin-babel": "^2.3.9",
-    "tape": "^4.4.0"
+    "rollup-plugin-babel": "^2.3.9"
+  },
+  "ava": {
+    "files": [
+      "./tests/**/*.test.js"
+    ],
+    "failFast": true,
+    "serial": true,
+    "tap": true,
+    "verbose": true,
+    "require": [
+      "./tests/config.babel.js"
+    ]
   }
 }

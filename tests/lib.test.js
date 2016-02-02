@@ -1,7 +1,6 @@
-import tape from 'tape';
+import ava from 'ava';
 import { cube } from '../src/math';
 
-tape('Lib es6 test', (test) => {
-	test.equal(cube(5), 125, 'should equal 125');
-	test.end();
+ava('Lib es6 test', (test) => {
+	test.is(cube(5), 125, 'should equal 125');
 });
