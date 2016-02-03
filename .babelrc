@@ -1,9 +1,4 @@
 {
   "presets": ["es2015-webpack", "stage-0"],
-  "ignore": "tests/**/*.test.js",
-  "env": {
-	  "development": {
-		  "sourceMaps": "inline"
-	  }
-  }
+  "ignore": "tests/**/*.test.js"
 }

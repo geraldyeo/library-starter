@@ -9,7 +9,7 @@ var dir_lib = path.resolve(__dirname, 'lib');
 module.exports = {
 	devtool: optimizeMinimize ? 'source-map' : null,
 	entry: {
-		main: ['babel-polyfill', path.resolve(dir_src, 'index.js')]
+		main: [path.resolve(dir_src, 'index.js')]
 	},
 	output: {
 		path: dir_lib,

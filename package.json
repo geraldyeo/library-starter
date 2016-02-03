@@ -8,6 +8,7 @@
 	"precompile": "rm -rf lib",
 	"compile": "webpack -p",
     "lint": "eslint -c .eslintrc src",
+    "pretest": "webpack",
     "test": "nyc ava"
   },
   "keywords": [
