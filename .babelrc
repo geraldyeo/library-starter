@@ -1,5 +1,5 @@
 {
-  "presets": ["es2015-rollup", "stage-0"],
+  "presets": ["es2015-webpack", "stage-0"],
   "ignore": "tests/**/*.test.js",
   "env": {
 	  "development": {
