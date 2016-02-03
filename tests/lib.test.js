@@ -1,6 +1,10 @@
 import ava from 'ava';
-import { cube } from '../src/math';
+import { square, cube } from '../src/math';
 
-ava('Lib es6 test', (test) => {
+ava('test square', (test) => {
+	test.is(square(5), 25, 'should equal 25');
+});
+
+ava('test cube', (test) => {
 	test.is(cube(5), 125, 'should equal 125');
 });
